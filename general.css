@@ -9,6 +9,16 @@
   color:  white;   
 }
 
+.text_header_top {
+  position: relative;
+  /*animation-name: jump_up_top;*/
+  animation-duration: 1s;
+  animation-delay: 0s;
+  padding-top:5%;
+  text-align: center;
+  color:  white;
+}
+
 .text_body {
   position: relative;
   animation-name: fade_in;
@@ -21,6 +31,12 @@
 
 @keyframes jump_up {
   0%   {top: 50px; color:transparent;}
+  25%  {top:-25px;}
+  100% {top:0px;}
+}
+
+@keyframes jump_up_top {
+  0%   {top: 25px; color:transparent;}
   25%  {top:-25px;}
   100% {top:0px;}
 }

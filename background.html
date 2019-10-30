@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>15-418 Project!</title>
+
+    <link rel="stylesheet" type="text/css" href="general.css">
   </head>
   <body style="background-color: #373737">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -30,14 +32,40 @@
       </div>
     </nav>
 
-    <h3 class="display-2 text-center" style="padding-top:15%; color: white">Background</h3>
-    <div class="d-md-flex justify-content-center" style="padding-right:10%; padding-left:10%; padding-top:15%">
-      <p class="lead text-center" style="color:white">
-        If your project involves accelerating a compute-intensive application, describe the application or piece of the application you are going to implement in more
-detail. This description need only be a few paragraphs. It might be helpful to include a
-block diagram or pseudocode of the basic idea. An important detail is what aspects of the
-problem might benefit from parallelism and why?
+    <h1 class="display-4 text-center text_header_top" style="color: white">Background</h1>
+    <div  style="padding-right:10%; padding-left:10%; padding-top:5%">
+      <p class="lead text-center text_body" style="animation-delay: 1s">
+        Prefetching code insertion has limitless possibilities because it is loading memory before it executes at any stage of your code. Computing every possibility would take an exceptional amount of time, and running every possible code would take even longer. We are trying to make this process easier by running on multiple different cores with non-interfering caches.
       </p>
+      <p class="lead text-center text_body" style="animation-delay: 2s; padding: 10px">
+        The aspects of the problem that benefit from this problem are two fold. The first is that we are able to continuously update our machine learning model by continually testing different versions of the prefetching code. The second is that the formation of the code itself can be done in parallel which is then subsequently tested, but generation could be done on a different machine.
+      </p>
+      <div class="d-xl-flex justify-content-center">
+        <p class="lead text_body align-self-stretch w-40" style="animation-delay: 3s; text-align: left; padding:   2%; padding-top: 2%">
+          Pseudocode example of code distribution:<br><br>
+          AllPossibilities = genInParallel(codeFile) <br>
+          foreach program in AllPossibilities <br>
+          <span style="margin-left:2em">timeRan = run_prefetch_code(program)</span><br>
+          <span style="margin-left:2em">update_model(timeRan, program)</span><br>
+          
+        </p>
+        <p class="lead text_body align-self-stretch w-60" style="animation-delay: 4s; text-align: left; padding:   2%; padding-top: 2%">
+          Pseudocode example of code generation:<br><br>
+          def gen_prefetch_code(code):<br>
+          <span style="margin-left:2em">all_programs = []
+          </span><br>
+          <span style="margin-left:2em">foreach line in lines(code):
+          </span><br>
+          <span style="margin-left:4em">newCode = generate_all_lines(line,code)
+          </span><br>
+          <span style="margin-left:4em">new_programs = gen_prefetch_code(newCode)
+          </span><br>
+          <span style="margin-left:4em">all_programs += new_programs
+          </span><br>
+          <span style="margin-left:2em">return all_programs
+          </span><br>
+        </p>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
