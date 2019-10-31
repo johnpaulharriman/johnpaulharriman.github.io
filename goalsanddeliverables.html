@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>15-418 Project!</title>
+    <link rel="stylesheet" type="text/css" href="general.css">
   </head>
   <body style="background-color: #373737">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -30,25 +31,10 @@
       </div>
     </nav>
 
-    <h3 class="display-2 text-center" style="padding-top:15%; color: white">g & d</h3>
-    <div class="d-md-flex justify-content-center" style="padding-right:10%; padding-left:10%; padding-top:15%">
-      <p class="lead text-center" style="color:white">
-        • Separate your goals into what you PLAN TO ACHIEVE (what you believe you must
-get done to have a successful project and get the grade you expect) and an extra
-goal or two that you HOPE TO ACHIEVE if the project goes really well and you get
-ahead of schedule, as well as goals in case the work goes more slowly. It may not be
-possible to state precise performance goals at this time, but we encourage you be as
-precise as possible. If you do state a goal, give some justification of why you think
-you can achieve it. (e.g., I hope to speed up my starter code 10x, because if I did it
-would run in real-time.)
-• If applicable, describe the demo you plan to show at the poster session (Will it be an
-interactive demo? Will you show an output of the program that is really neat? Will
-you show speedup graphs?). Specifically, what will you show us that will demonstrate
-you did a good job?
-• If your project is an analysis project, what are you hoping to learn about the workload
-or system being studied? What question(s) do you plan to answer in your analysis?
-• Systems project proposals should describe what the system will be capable of and
-what performance is hoped to be achieved
+    <h1 class="display-4 text-center text_header_top" style=" ">Goals and Deliverables</h1>
+    <div class="d-md-flex justify-content-center" style="padding-right:10%; padding-left:10%; padding-top:5%">
+      <p class="lead text_body" style="">
+        There are two aspects to this project: Speedup of program instances in runtime due to the hidden latency costs that prefetching provides, and also the computation of the machine learning model itself. We want this project to be usable for many programs, not just those that are set in stone, therefore we can set a cap to the duration of the computation of the machine learning model as a baseline for the project. <br><br> We cannot yet determine specific performance metrics, given that at this point we are merely theorizing the project itself, but we would like the model usable on X lines of code in under Y minutes, with X and Y to be determined in the first two weeks of the project. Our base goal would be to improve the efficiency of the sequential machine learning algorithm, which we can standardize by expecting a speedup of 1.5x over the baseline model. We expect this to be possible because we will be using separate processors to train the model on specific instances and will also be parallelizing the computation of the model on each instance. We have yet to determine the number of processors we will use, but even with the overhead associated with the distribution of instances to cores, we expect that with 2 cores, at least 1.5x speedup will be possible. When it comes to the speedup of the runtime of each program instance, this metric is less relevant given that it is not related to the 15-418 course load. We would still like to see a speedup with the runtime, but for the deliverables of the project we will focus on the speedup achieved on model building. By the presentation of the project we would like to provide speedup graphs over the multiple iterations of the project, beginning from the sequential model to our final model. 
       </p>
     </div>
 

@@ -11,7 +11,7 @@
 
 .text_header_top {
   position: relative;
-  /*animation-name: jump_up_top;*/
+  animation-name: jump_up_top;
   animation-duration: 1s;
   animation-delay: 0s;
   padding-top:5%;
