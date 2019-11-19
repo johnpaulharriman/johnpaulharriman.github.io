@@ -27,14 +27,20 @@
           <a class="nav-item nav-link active" href="#">Goals and Deliverables<span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="platform.html">Platform Choice</a>
           <a class="nav-item nav-link" href="schedule.html">Schedule</a>
+          <a class="nav-item nav-link" href="checkpoint.html">Checkpoint Misc</a>
         </div>
       </div>
     </nav>
 
-    <h1 class="display-4 text-center text_header_top" style=" ">Goals and Deliverables</h1>
+    <h1 class="display-4 text-center text_header_top" style=" ">Goals and Deliverables - Update</h1>
     <div class="d-md-flex justify-content-center" style="padding-right:10%; padding-left:10%; padding-top:5%">
       <p class="lead text_body" style="">
-        There are two aspects to this project: Speedup of program instances in runtime due to the hidden latency costs that prefetching provides, and also the computation of the machine learning model itself. We want this project to be usable for many programs, not just those that are set in stone, therefore we can set a cap to the duration of the computation of the machine learning model as a baseline for the project. <br><br> We cannot yet determine specific performance metrics, given that at this point we are merely theorizing the project itself, but we would like the model usable on X lines of code in under Y minutes, with X and Y to be determined in the first two weeks of the project. Our base goal would be to improve the efficiency of the sequential machine learning algorithm, which we can standardize by expecting a speedup of 1.5x over the baseline model. We expect this to be possible because we will be using separate processors to train the model on specific instances and will also be parallelizing the computation of the model on each instance. We have yet to determine the number of processors we will use, but even with the overhead associated with the distribution of instances to cores, we expect that with 2 cores, at least 1.5x speedup will be possible. When it comes to the speedup of the runtime of each program instance, this metric is less relevant given that it is not related to the 15-418 course load. We would still like to see a speedup with the runtime, but for the deliverables of the project we will focus on the speedup achieved on model building. By the presentation of the project we would like to provide speedup graphs over the multiple iterations of the project, beginning from the sequential model to our final model. 
+        Since our project has changed significantly, our proposal’s goals do not at all reflect our current goals and deliverables, but we do have a more concrete approach to what we want accomplished. <br><br>  
+
+        Our performance metrics will be seen through a decrease in cache misses in the Last Level Cache shared between the multi-core processor simulated in gem5 along with an increase in performance in terms of clock ticks for our specified benchmarks.<br><br>  
+
+        The benchmarks we use will come in three different stages: no memory access, basic memory access, and complex memory access patterns. We hope to see a significant difference between all three especially when we know where to insert the prefetches due to the simulator. <br><br>  
+
       </p>
     </div>
 

@@ -29,14 +29,25 @@
           <a class="nav-item nav-link" href="goalsanddeliverables.html">Goals and Deliverables</a>
           <a class="nav-item nav-link" href="platform.html">Platform Choice</a>
           <a class="nav-item nav-link" href="schedule.html">Schedule</a>
+          <a class="nav-item nav-link" href="checkpoint.html">Checkpoint Misc</a>
         </div>
       </div>
     </nav>
 
-    <h1 class="display-4 text-center text_header" style=" ">Summary</h1>
+    <h1 class="display-4 text-center text_header" style="padding-top:5%">Summary</h1>
     <div class="d-md-flex justify-content-center" style="padding-right:10%; padding-left:10%; padding-top:5%">
       <p class="lead text_body" style="">
-        Software prefetching can be a guessing game for most programmers, leading to inefficient and trivial uses. Machine Learning can do the guessing for us since there are endless possibilities of where to give prefetching hints. By being able to do the guessing in parallel through the use of MPI running multiple instances of a program, we expect to see improvements for both prefetching and our machine learning algorithm.
+        Software prefetching can be a useful way to reduce memory request latency in programs. However, not many prefetching protocols today  take into account the cache coherency protocols, which may affect the effectiveness of prefetching. Due to this fact, we are planning on using a gem5 simulator to determine the performance of prefetching pragmas with different combinations of cache coherence protocols. As a reach goal, we plan on developing a machine learning algorithm to further increase the performance benefits of prefetching on different coherency protocols.
+      </p>
+    </div>
+
+    <h1 class="display-4 text-center text_header" style="padding-top:5%">Update Summary</h1>
+    <div class="d-md-flex justify-content-center" style="padding-right:10%; padding-left:10%; padding-top:5%">
+      <p class="lead text_body" style="">
+        After a meeting with Professor Mowry, we realized that the direction that our current project was going in was not within the scope of the course and could not reasonably accomplished given the time constraints. We have pivoted our approach to be focused now on prefetching with different coherence protocols since those are the topics covered in class. <br> 
+
+        The new approach we have been taking is cache simulation done in gem5 where we can insert certain prefetching pragmas and look at the gem5 simulator to see when these prefetching techniques would be worth the overhead. The gem5 allows for us to look at performance along with miss cache counters and we can see when a prefetch would be optimal, along with which cache coherency protocol to use, MESI or MOESI.
+
       </p>
     </div>
 

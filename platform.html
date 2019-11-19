@@ -27,6 +27,7 @@
           <a class="nav-item nav-link" href="goalsanddeliverables.html">Goals and Deliverables</a>
           <a class="nav-item nav-link active" href="#">Platform Choice<span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="schedule.html">Schedule</a>
+          <a class="nav-item nav-link" href="checkpoint.html">Checkpoint Misc</a>
         </div>
       </div>
     </nav>
@@ -34,7 +35,7 @@
     <h1 class="display-4 text-center text_header" style=" ">Platform Choice</h1>
     <div class="d-md-flex justify-content-center" style="padding-right:10%; padding-left:10%; padding-top:5%">
       <p class="lead text_body" style="">
-        We are planning on programming the machine learning model in C++, using a combination of OpenMP and MPI to efficiently parallelize the computation of this model. These are the optimal platforms to use because we expect the machine learning model computation to require many shared resources, while we will be using multiple instances of the program to fully compute the model that can be exploited with the message passing system of MPI. 
+        Our platform choice will be a combination of C and gem5 written in C++. These have become our optimal platforms because we are able to create instances of data contention between multicores with the already implemented technology that C and C++ offer and can track this data through the use of gem5.
       </p>
     </div>
 

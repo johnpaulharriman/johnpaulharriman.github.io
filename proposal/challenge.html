@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>15-418 Project!</title>
+    <link rel="stylesheet" type="text/css" href="general.css">
+  </head>
+  <body style="background-color: #373737">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">15-418 Project</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="index.html">Home</a>
+          <a class="nav-item nav-link" href="summary.html">Summary</a>
+          <a class="nav-item nav-link" href="background.html">Background</a>
+          <a class="nav-item nav-link active" href="#">The Challenge<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="resources.html">Resources</a>
+          <a class="nav-item nav-link" href="goalsanddeliverables.html">Goals and Deliverables</a>
+          <a class="nav-item nav-link" href="platform.html">Platform Choice</a>
+          <a class="nav-item nav-link" href="schedule.html">Schedule</a>
+        </div>
+      </div>
+    </nav>
+
+  
+    <div class="d-md-flex justify-content-center" style="padding-right:10%; padding-left:10%; padding-top:5%">
+      <a style="color:white" href="../index.html" >
+        This is an old version. Click here for current.
+      </a>
+    </div>
+
+    <h1 class="display-4 text-center text_header" style=" ">Challenges</h1>
+    <div class="d-md-flex justify-content-center" style="padding-right:10%; padding-left:10%; padding-top:5%">
+      <p class="lead text_body" style="">
+        The problem is challenging because there are a lot of moving parts and software prefetching is a relatively unexplored area. The aspects of the problem that make it hard to parallelize is that we will have to do everything without interfering with our cache. In the ideal case, we would like one program to run in isolation and update based on the single instance run. Other aspects that make it difficult is that we have separate cases running, but also want it to update a shared resource. We hope to learn effective message passing while keeping certain memory constraints on our running programs. The dependencies are that to build the model, we need each run to finish with an updated execution time. There is a possibility that some runs take longer than others and can lead to interesting race cases. There is a relatively high communication ratio between each finished run, but as the test program grows, there should be more computation done. This project is almost entirely based on different branches so very high diverging execution. The properties of the system that will make this the most challenging is being able to turn off hardware prefetching so that we can see the benefits of the program with our added software prefetching, we must also take into consideration that each machine we run on has to be the same in order to build a consistent model.
+      </p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
